@@ -211,8 +211,8 @@ Indexes:
 ##  Setup Instructions
 
 ```bash
-git clone https://github.com/Saurav3004/finance.git
-cd finance
+git clone https://github.com/Saurav3004/finance-backend.git
+cd finance-backend
 npm install
 ```
 
