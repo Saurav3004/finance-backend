@@ -1,5 +1,4 @@
 import jwt from "jsonwebtoken";
-import { errorMiddleware } from "./error.middleware.js";
 
 export const authMiddleware =  (req,res,next) => {
     try {
@@ -22,18 +21,22 @@ export const authMiddleware =  (req,res,next) => {
                 message:"You are not authenticated"
             })
         };
-    
-        const {_id,role} = jwt.verify(token,process.env.JWT_SECRET_KEY);
-        if(!_id || !role){
+
+
+        
+        const {id,role} = jwt.verify(token,process.env.JWT_SECRET_KEY);
+        if(!id || !role){
             return res.status(401).json({
                 message: "You are not authorized"
             })
         };
         req.user = {
-            _id,role
+            id,role
         };
         next()
     } catch (error) {
-        return errorMiddleware(error)
+        return res.status(401).json({
+            message:"Invalid token"
+        })
     }
 }

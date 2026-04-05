@@ -16,7 +16,7 @@ export const createFinanceRecord = async (req,res) =>{
             finance
     })
     } catch (error) {
-        throw new errorMiddleware;
+        return errorMiddleware(error)
     }
 }
 
@@ -33,9 +33,7 @@ export const getRecords = async (req,res) => {
             data
         })
     } catch (error) {
-        return res.status(400).json({
-            message:"Error while getting all finance records"
-        })
+        return errorMiddleware(error)
     }
 }
 
@@ -44,19 +42,20 @@ export const updateRecord = async (req,res) => {
         const updated = await update(req.params.id, req.body);
         return res.status(200).json(updated);
     } catch (error) {
-        throw new errorMiddleware
+        return errorMiddleware(error)
     }
 }
 
 export const deleteRecord = async (req,res) => {
     try {
-        const softDelete = await softDelete(req.params.id);
+        const financeDelete = await softDelete(req.params.id);
+        console.log(financeDelete)
         return res.status(200).json({
             message:"Deleted successfully",
-            softDelete
+            financeDelete
         })
     } catch (error) {
-        throw new errorMiddleware;
+        return errorMiddleware(error)
     }
 }
 

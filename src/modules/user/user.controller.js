@@ -2,7 +2,6 @@ import { errorMiddleware } from "../../middleware/error.middleware.js";
 import {User} from "../user/user.model.js"
 
 export const getUsers = async (req,res) => {
-    console.log("Hello")
     try {
         const users = await User.find().select("-password");
         return res.status(200).json({
@@ -22,6 +21,12 @@ export const updateRole = async (req,res) => {
                 message:"Please provide userId"
             })
         };
+
+    if (!["viewer", "analyst","admin"].includes(role)) {
+      return res.status(400).json({
+        message: "Invalid role"
+      });
+    }
 
         const user = await User.findByIdAndUpdate({_id:userId},
             {role},

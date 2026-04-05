@@ -245,6 +245,29 @@ Steps:
 Authorization: Bearer <token>
 ```
 
+##  API Documentation
+
+You can explore and test all API endpoints using the Postman collection below:
+
+ Postman Collection:  
+https://www.postman.com/workspace/Building~173567c6-23a4-44e3-8b75-ba5cbc80010c/collection/28502822-2467ed2a-c033-4b1c-80b4-e777864395bf?action=share&source=copy-link&creator=28502822
+
+###  How to Use
+
+1. Open the link above  
+2. Login using `/auth/signin`  
+3. Copy the JWT token  
+4. Add it in headers:
+   Authorization: Bearer <your_token>
+5. Test protected APIs  
+
+---
+
+##  Base URL
+
+http://localhost:3000
+
+
 ---
 
 ##  Design Highlights
@@ -255,6 +278,8 @@ Authorization: Bearer <token>
 * Scalable modular structure
 
 ---
+
+
 
 ##  Future Improvements
 
