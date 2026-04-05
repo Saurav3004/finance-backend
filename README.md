@@ -255,7 +255,7 @@ https://www.postman.com/workspace/Building~173567c6-23a4-44e3-8b75-ba5cbc80010c/
 ###  How to Use
 
 1. Open the link above  
-2. Login using `/auth/signin`  
+2. Login using `/api/auth/signin`  
 3. Copy the JWT token  
 4. Add it in headers:
    Authorization: Bearer <your_token>
