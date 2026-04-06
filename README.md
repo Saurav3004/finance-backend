@@ -159,6 +159,7 @@ Indexes:
 
 * POST /api/auth/signup
 * POST /api/auth/signin
+* POST /api/auth/admin  (for admin signup only single admin can register from this route)
 
 ### Users (Admin only)
 
