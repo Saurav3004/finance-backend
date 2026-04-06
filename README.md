@@ -157,28 +157,28 @@ Indexes:
 
 ### Auth
 
-* POST /auth/signup
-* POST /auth/signin
+* POST /api/auth/signup
+* POST /api/auth/signin
 
 ### Users (Admin only)
 
-* GET /users
-* PATCH /users/:id/role
-* PATCH /users/:id/status
+* GET /api/users
+* PATCH /api/users/:id/role
+* PATCH /api/users/:id/status
 
 ### Finance
 
-* POST /finance
-* GET /finance
-* PATCH /finance/:id
-* DELETE /finance/:id
+* POST /api/finance
+* GET /api/finance
+* PATCH /api/finance/:id
+* DELETE /api/finance/:id
 
 ### Dashboard
 
-* GET /finance/summary
-* GET /finance/category
-* GET /finance/trends
-* GET /finance/recent
+* GET /api/finance/summary
+* GET /api/finance/category
+* GET /api/finance/trends
+* GET /api/finance/recent
 
 ---
 
