@@ -170,7 +170,7 @@ Indexes:
 ### Finance
 
 * POST /api/finance
-* GET /api/finance
+* GET /api/finance (anyone can access this route)
 * PATCH /api/finance/:id
 * DELETE /api/finance/:id
 
